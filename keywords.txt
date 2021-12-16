@@ -6,11 +6,15 @@
 # Datatypes (KEYWORD1)
 #########################################
 
-
 #########################################
 # Methods and Functions (KEYWORD2)
 #########################################
 
+DEBUG_ERROR_MICR0_ROS	KEYWORD2
+
+DEBUG_WARNING_MICR0_ROS	KEYWORD2
+
+error_loop	KEYWORD2
 
 #########################################
 # Constants (LITERAL1)
