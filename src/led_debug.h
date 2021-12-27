@@ -1,6 +1,6 @@
 /***********************************************************************************
  *  @file       led_debug.h
- *  Project     serial_debug
+ *  Project     led_debug
  *  @brief      Arduino Due library which LED debugging implementation to be used 
  *              together with the micro-ROS library.
  *
@@ -34,23 +34,31 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
 **********************************************************************************/
-#ifndef LED_DEBUG
-#define LED_DEBUG
+#ifndef LED_DEBUG.H
+#define LED_DEBUG.H
 
 #define MICR0_ROS_DEBUG // Debug mode
 
 //  WITH DEBUG MICROROS  
 #ifdef MICR0_ROS_DEBUG
 	//High error: aborting
-	#define DEBUG_ERROR_MICR0_ROS(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){error_loop();}}
+	#define DEBUG_ERROR_MICR0_ROS(fn) { \
+	rcl_ret_t temp_rc = fn; \
+	if((temp_rc != RCL_RET_OK)){\
+		errorLoop();\
+	}\
+	}
 
 	//Low error: continuing, 
-	#define DEBUG_WARNING_MICR0_ROS(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){}}
+	#define DEBUG_WARNING_MICR0_ROS(fn) { \
+	rcl_ret_t temp_rc = fn; \
+	if((temp_rc != RCL_RET_OK)){}\
+	}
 	
 	#define LED_DEBUG_PIN 13
 	
 	#define LED_DEBUG_DELAY 1000
 
-	void error_loop();
+	void errorLoop();
 	#endif
 #endif

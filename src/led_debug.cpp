@@ -1,6 +1,6 @@
 /***********************************************************************************
  *  @file       led_debug.cpp
- *  Project     serial_debug
+ *  Project     led_debug
  *  @brief      Arduino Due library which LED debugging implementation to be used 
  *              together with the micro-ROS library.
  *
@@ -34,16 +34,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
 **********************************************************************************/
-#ifndef LED_DEBUG
-#include <Arduino.h>
 #include <led_debug.h>
+#include <Arduino.h>
 
-	void error_loop(){
-	pinMode(LED_DEBUG_PIN, OUTPUT);
-	  while(1){
-		digitalWrite(LED_DEBUG_PIN, !digitalRead(LED_DEBUG_PIN));
-		delay(LED_DEBUG_DELAY);
-	  }
-	}
+void errorLoop(){
+pinMode(LED_DEBUG_PIN, OUTPUT);
+  while(1){
+	digitalWrite(LED_DEBUG_PIN, !digitalRead(LED_DEBUG_PIN));
+	delay(LED_DEBUG_DELAY);
+  }
+}
 
-#endif
