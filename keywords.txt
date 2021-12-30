@@ -1,5 +1,5 @@
 #########################################
-# Syntax Coloring Map For SimpleMotor, DualMotor
+# Syntax Coloring Map For led_debug
 #########################################
 
 #########################################
