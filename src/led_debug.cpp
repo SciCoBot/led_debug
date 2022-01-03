@@ -37,7 +37,7 @@
 #include "led_debug.h"
 #include <Arduino.h>
 
-void ledBlinkError(){
+void ledBlinkError(uint8_t pinLed = LED_DEBUG_PIN, uint8_t delayBLink = LED_DEBUG_DELAY){
   while(1){
 	digitalWrite(LED_DEBUG_PIN, !digitalRead(LED_DEBUG_PIN));
 	delay(LED_DEBUG_DELAY);
