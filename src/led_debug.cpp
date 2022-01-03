@@ -34,11 +34,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
 **********************************************************************************/
-#include <led_debug.h>
+#include "led_debug.h"
 #include <Arduino.h>
 
-void errorLoop(){
-pinMode(LED_DEBUG_PIN, OUTPUT);
+void ledBlinkError(){
   while(1){
 	digitalWrite(LED_DEBUG_PIN, !digitalRead(LED_DEBUG_PIN));
 	delay(LED_DEBUG_DELAY);
