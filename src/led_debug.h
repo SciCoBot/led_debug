@@ -59,6 +59,9 @@
 	
 	#define LED_DEBUG_DELAY 1000
 
-	void ledBlinkError();
+	pinMode(LED_DEBUG_PIN, OUTPUT); //testar para ver se funciona
+	
+	void ledBlinkError(uint8_t pinLed = LED_DEBUG_PIN, uint8_t delayBLink = LED_DEBUG_DELAY);
+
 	#endif
 #endif
