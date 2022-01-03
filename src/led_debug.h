@@ -59,6 +59,6 @@
 	
 	#define LED_DEBUG_DELAY 1000
 
-	void errorLoop();
+	void ledBlinkError();
 	#endif
 #endif
