@@ -34,10 +34,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
 **********************************************************************************/
-#ifndef LED_DEBUG.H
-#define LED_DEBUG.H
+#ifndef LED_DEBUG_H
+#define LED_DEBUG_H
 
-#define MICR0_ROS_DEBUG // Debug mode
+#define MICR0_ROS_DEBUG // Micro-ROS debug mode
 
 //  WITH DEBUG MICROROS  
 #ifdef MICR0_ROS_DEBUG
@@ -63,5 +63,5 @@
 	
 	void ledBlinkError(uint8_t pinLed = LED_DEBUG_PIN, uint8_t delayBLink = LED_DEBUG_DELAY);
 
-	#endif
-#endif
+	#endif //MICR0_ROS_DEBUG
+#endif //LED_DEBUG_H
