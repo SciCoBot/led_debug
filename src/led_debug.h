@@ -39,7 +39,8 @@
 
 #include <Arduino.h>
 
-#define MICR0_ROS_DEBUG // Micro-ROS debug mode
+#define InitLED() pinMode(LED_DEBUG_PIN, OUTPUT);
+#define MICR0_ROS_DEBUG //Micro-ROS debug mode
 
 //  WITH DEBUG MICROROS  
 #ifdef MICR0_ROS_DEBUG
