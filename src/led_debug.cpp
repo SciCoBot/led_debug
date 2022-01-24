@@ -36,15 +36,9 @@
 **********************************************************************************/
 #include "led_debug.h"
 
-
 void ledBlinkDebug(uint8_t pinLed, uint8_t delayBLink){
   while(1){
 	digitalWrite(LED_DEBUG_PIN, !digitalRead(LED_DEBUG_PIN));
 	delay(LED_DEBUG_DELAY);
   }
 }
-
-int main(){
-	pinMode(LED_DEBUG_PIN, OUTPUT); 
-}
-
