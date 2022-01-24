@@ -39,12 +39,12 @@
 
 #include <Arduino.h>
 
-#define MICR0_ROS_DEBUG //Micro-ROS debug mode
+#define MICR0_ROS_DEBUG 1//Micro-ROS debug mode
 #define INIT_LED_MICRO_ROS() pinMode(LED_DEBUG_PIN, OUTPUT);
 
 
 //  WITH DEBUG MICROROS  
-#ifdef MICR0_ROS_DEBUG
+#if MICR0_ROS_DEBUG == 1
 	//High error: aborting
 	#define DEBUG_ERROR_MICR0_ROS(fn) { \
 	rcl_ret_t temp_rc = fn; \
@@ -64,6 +64,5 @@
 	#define LED_DEBUG_DELAY 1000
 	
 	void ledBlinkDebug(uint8_t pinLed = LED_DEBUG_PIN, uint8_t delayBLink = LED_DEBUG_DELAY);
-
-	#endif //MICR0_ROS_DEBUG
+#endif //MICR0_ROS_DEBUG
 #endif //LED_DEBUG_H
