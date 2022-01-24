@@ -17,7 +17,7 @@ Está biblioteca tem como objetivo fornecer funções e macros para debug utiliz
 Nota: inspirada em exemplos fornecidos por [micro-ros-arduino](https://github.com/micro-ROS/micro_ros_arduino).
 
 ## Comandos Básicos
-## Definições
+### Definições
 - LED_DEBUG_PIN: define o pino de saída para o LED, por default é 13
 
 ### Macros:
