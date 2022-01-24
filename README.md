@@ -17,11 +17,13 @@ Está biblioteca tem como objetivo fornecer funções e macros para debug utiliz
 Nota: inspirada em exemplos fornecidos por [micro-ros-arduino](https://github.com/micro-ROS/micro_ros_arduino).
 
 ## Comandos Básicos
+## Definições
+- LED_DEBUG_PIN: define o pino de saída para o LED, por default é 13
 
 ### Macros:
 
-- **DEBUG_ERROR_MICR0_ROS:** verifica o retorno de uma função. Caso aconteça um erro a execução padrão é parada e o LED começa a piscar.
-- **DEBUG_WARNING_MICR0_ROS:** verifica o retorno de uma função. Caso aconteça um erro nada acontece.
+- **DEBUG_ERROR_MICR0_ROS(funct):** utilizado para verificar errros criticos na biblioteca micro-ROS. Para isso, verifica o retorno de uma função. No caso em que acontece um erro a execução padrão é parada e o LED começa a piscar.
+- **DEBUG_WARNING_MICR0_ROS(funct):** utilizado para verificar errros não crítico. Para isso verifica o retorno de uma função. Neste caso, caso aconteça um erro não crítico nada acontece. 
 
 ### Funções:
 - **errorLoop():** implementação que faz o led piscar, por default piscará o LED do pino 13 a cada um segundo.
@@ -34,11 +36,11 @@ Nota: inspirada em exemplos fornecidos por [micro-ros-arduino](https://github.co
 
 - Teste o exemplo.
 
-Obseervação: A biblioteca pode inutilizada caso a definição de MICR0_ROS_DEBUG seja retirada, evitando sobrecarga de memória para quando o uso não é necessário.
+Obseervação: A biblioteca pode inutilizada caso  MICR0_ROS_DEBUG seja definida com valor diferente de 1, evitando sobrecarga de memória para quando o uso não é necessário.
 
 ## Possíveis Atualizações
 
-- Implementar logica para DEBUG_WARNING_MICR0_ROS.
+- Implementar lógica complementar para DEBUG_WARNING_MICR0_ROS.
 
 ## Anotações de Desenvolvimento
 
