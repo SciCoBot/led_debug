@@ -10,12 +10,11 @@
 - [Possíveis Atualizações](#possíveis-atualizações)
 - [Anotações de Desenvolvimento](#anotações-de-desenvolvimento)
 
-
 ## Sobre
 
 Está biblioteca tem como objetivo fornecer funções e macros para debug utilizando um LED. A princípio as implementações realizadas constam apenas com a lógica de depuração para a biblitoeca [micro-ros-arduino](https://github.com/micro-ROS/micro_ros_arduino).
 
-Para a criação desta bibliote baseou-se em [library tutorial](https://www.arduino.cc/en/Hacking/libraryTutorial) e [API style guide](https://www.arduino.cc/en/Reference/APIStyleGuide).
+Nota: inspirada em exemplos fornecidos por [micro-ros-arduino](https://github.com/micro-ROS/micro_ros_arduino).
 
 ## Comandos Básicos
 
@@ -25,7 +24,7 @@ Para a criação desta bibliote baseou-se em [library tutorial](https://www.ardu
 - **DEBUG_WARNING_MICR0_ROS:** verifica o retorno de uma função. Caso aconteça um erro nada acontece.
 
 ### Funções:
-- **errorLoop:** implementação que faz o led piscar.
+- **errorLoop():** implementação que faz o led piscar, por default piscará o LED do pino 13 a cada um segundo.
 
 ## Como Utilizar
 
