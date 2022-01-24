@@ -14,6 +14,10 @@
 
 Está biblioteca tem como objetivo fornecer funções e macros para debug utilizando um LED. A princípio as implementações realizadas constam apenas com a lógica de depuração para a biblitoeca [micro-ros-arduino](https://github.com/micro-ROS/micro_ros_arduino).
 
+<p align="center">
+  <img src="https://github.com/SciCoBot/led_debug/blob/main/images/ledArduinoDue.png?raw=true"/ height="250" width="500">
+</p>
+
 Nota: inspirada em exemplos fornecidos por [micro-ros-arduino](https://github.com/micro-ROS/micro_ros_arduino).
 
 ## Comandos Básicos
